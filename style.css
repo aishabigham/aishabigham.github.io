@@ -298,6 +298,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 16px;
+    width: 100%;
 }
 
 .carousel-track-wrapper {
@@ -309,6 +310,7 @@ footer {
 .carousel-track {
     position: relative;
     height: 320px;
+    width: 100%;
 }
 
 .carousel-slide {
