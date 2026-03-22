@@ -5,82 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects — Aisha Bigham</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+        <div class="nav-inner">
+            <a class="nav-brand" href="index.html">Aisha Bigham</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="involvement.html">Involvement</a>
+            </div>
+        </div>
     </nav>
 
-    <header>
-        <h1>My Projects</h1>
-        <p class="subtitle">Research, data, and immersive technology</p>
+    <header class="page-header">
+        <p class="eyebrow">Selected Work</p>
+        <h1>Projects & Research</h1>
+        <p class="subtitle">Exploring the intersection of immersive technology, cognitive science, and data.</p>
     </header>
 
     <main>
-        <section class="projects">
 
-            <h2>Featured Work</h2>
+        <section class="projects-grid">
 
-            <div class="project-card">
-                <img src="ISMAR2025.jpeg" alt="VR gaze research">
-                <div>
-                    <h3>Gaze Behavior & Field Dependency in VR</h3>
-                    <p>
-                        Accepted to ISMAR 2025, this project investigates how individual differences in field dependency 
-                        influence gaze behavior and perception in virtual environments. Using the HTC Vive Pro Eye headset, 
-                        I collected and analyzed eye-tracking data with Recurrence Quantification Analysis (RQA) to identify 
-                        patterns that predict cybersickness susceptibility. This research sits at the intersection of cognitive 
-                        psychology, data science, and immersive technology.
-                    </p>
+            <!-- Project 1 -->
+            <article class="project-card featured">
+                <div class="card-image">
+                    <img src="ISMAR2025.jpeg" alt="VR eye-tracking research">
+                    <span class="badge">ISMAR 2025</span>
                 </div>
-            </div>
-
-            <div class="project-card">
-                <img src="northeastern_university_cos_logo.jpeg" alt="Spatial cognition VR">
-                <div>
-                    <h3>Spatial Cognition in VR</h3>
+                <div class="card-body">
+                    <p class="card-tag">VR Research · Eye Tracking · Cognitive Science</p>
+                    <h2>Gaze Behavior & Field Dependency in VR</h2>
                     <p>
-                        In this project, I study how people form and navigate spatial mental maps within virtual environments 
-                        using the Meta Quest headset. I run participants through structured experiments, collect behavioral 
-                        data, and troubleshoot Unity-based tasks. The goal is to understand how immersive environments affect 
-                        spatial reasoning and memory compared to the real world.
+                        Investigated how individual differences in field dependency influence gaze behavior and cybersickness susceptibility 
+                        in virtual environments. Using the HTC Vive Pro Eye, I collected and analyzed eye-tracking data with 
+                        Recurrence Quantification Analysis (RQA) to identify behavioral predictors of cybersickness dropout.
+                        This work was accepted to ISMAR 2025, bridging cognitive psychology, immersive technology, and data science.
                     </p>
+                    <ul class="tech-tags">
+                        <li>Python / R</li>
+                        <li>RQA</li>
+                        <li>HTC Vive Pro Eye</li>
+                        <li>Eye Tracking</li>
+                        <li>Experimental Design</li>
+                    </ul>
                 </div>
-            </div>
+            </article>
 
-            <div class="project-card">
-                <img src="CodeWiz.png" alt="Code Wiz teaching">
-                <div>
-                    <h3>Unity 3D Curriculum — Code Wiz</h3>
+            <!-- Project 2 -->
+            <article class="project-card">
+                <div class="card-image">
+                    <img src="northeastern_university_cos_logo.jpeg" alt="Spatial cognition VR study">
+                </div>
+                <div class="card-body">
+                    <p class="card-tag">VR Research · Spatial Cognition · Behavioral Data</p>
+                    <h2>Spatial Cognition in VR</h2>
                     <p>
-                        As a Coding & Game Development Instructor at Code Wiz, I designed and built a Unity 3D curriculum 
-                        from scratch for students ages 6–16. This involved creating structured lesson plans, hands-on projects, 
-                        and age-appropriate challenges that introduce students to game development, programming logic, and 
-                        creative problem-solving.
+                        Conducted an ongoing study examining how people learn and navigate spatial environments in VR using the Meta Quest.
+                        Responsibilities include running participants, collecting and managing behavioral data, and troubleshooting 
+                        Unity-based experiments. This project spans both Khoury College of Computer Sciences + CAMD and the College of Science.
                     </p>
+                    <ul class="tech-tags">
+                        <li>Unity</li>
+                        <li>Meta Quest</li>
+                        <li>Behavioral Data</li>
+                        <li>Experimental Design</li>
+                    </ul>
                 </div>
-            </div>
+            </article>
 
-            <h2>Skills & Tools</h2>
-            <ul>
-                <li>Python, R, SQL</li>
-                <li>Unity 3D, Meta Quest, HTC Vive Pro Eye</li>
-                <li>Eye-tracking analysis & Recurrence Quantification Analysis (RQA)</li>
-                <li>Experimental design & behavioral data collection</li>
-                <li>HTML, CSS, JavaScript</li>
-            </ul>
+            <!-- Project 3 -->
+            <article class="project-card">
+                <div class="card-image">
+                    <img src="CodeWiz.png" alt="Code Wiz Unity curriculum">
+                </div>
+                <div class="card-body">
+                    <p class="card-tag">Education · Game Development · Curriculum Design</p>
+                    <h2>Unity 3D Curriculum at Code Wiz</h2>
+                    <p>
+                        As a Coding & Game Development Instructor at Code Wiz, I built a Unity 3D curriculum from scratch for 
+                        students ages 7–17. Designed lesson plans, hands-on projects, and structured progressions to teach 
+                        game development fundamentals — from scripting basics in C# to building fully playable 3D games.
+                    </p>
+                    <ul class="tech-tags">
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>Curriculum Design</li>
+                        <li>Teaching</li>
+                    </ul>
+                </div>
+            </article>
 
         </section>
 
         <section class="contact">
-            <h2>Contact</h2>
-            <p>Phone: <a href="tel:+19494393979">+1 (949) 439-3979</a></p>
-            <p>Email: <a href="mailto:bigham.a@northeastern.edu">zahir.a@northeastern.edu</a></p>
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:bigham.a@northeastern.edu">bigham.a@northeastern.edu</a></p>
             <p>LinkedIn: <a href="https://linkedin.com/in/aishabigham" target="_blank">linkedin.com/in/aishabigham</a></p>
         </section>
+
     </main>
 
     <footer>

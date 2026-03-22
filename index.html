@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aisha Bigham</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+        <div class="nav-inner">
+            <a class="nav-brand" href="index.html">Aisha Bigham</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="involvement.html">Involvement</a>
+            </div>
+        </div>
     </nav>
 
     <header>
-        <h1>Hi, I'm Aisha Bigham!</h1>
+        <p class="eyebrow">Welcome</p>
+        <h1>Hi, I'm Aisha Bigham</h1>
         <p class="subtitle">Data Science & Psychology | Minor in Immersive Media @ Northeastern University</p>
     </header>
 
@@ -30,30 +37,73 @@
                     how people perceive and interact in immersive digital worlds.
                 </p>
                 <p>
-                    My research spans both Khoury College of Computer Sciences & CAMD and the College of Science. 
-                    In one project, accepted to ISMAR 2025, I study gaze behavior and field dependency in VR to understand 
-                    how individual differences influence perception. In another, I investigate spatial cognition in VR, including 
-                    running participants, collecting behavioral data, and troubleshooting Unity-based experiments using the 
-                    Meta Quest headset.
+                    My research spans both Khoury College of Computer Sciences + CAMD and the College of Science. 
+                    In one project, accepted to ISMAR 2025, I study gaze behavior and field dependency in VR to 
+                    understand how individual differences influence perception. In another, I investigate spatial 
+                    cognition in VR, including running participants, collecting behavioral data, and troubleshooting 
+                    Unity-based experiments using the Meta Quest headset.
                 </p>
                 <p>
-                    Alongside research, I teach as a Coding & Game Development Instructor at Code Wiz, where I develop 
-                    lesson plans and built a Unity 3D curriculum entirely from scratch. Working with students has deepened 
-                    my appreciation for making complex technical concepts accessible and engaging.
+                    Alongside research, I teach as a Coding & Game Development Instructor at Code Wiz, where I 
+                    develop lesson plans and built a Unity 3D curriculum entirely from scratch. Working with students 
+                    has deepened my appreciation for making complex technical concepts accessible and engaging.
                 </p>
                 <p>
                     My goal is to build experiences that are both data-driven and deeply human. From analyzing 
                     eye-tracking data to designing VR experiments to teaching kids to code, I approach every 
                     project with curiosity and intention. I see the future of technology living at the intersection 
-                    of cognitive science and immersive media, and I am proud to be doing work at that edge!
+                    of cognitive science and immersive media, and I am proud to be doing work right at that edge.
                 </p>
             </div>
         </section>
 
+        <section class="carousel-section">
+            <div class="carousel">
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#8592;</button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide"><img src="cat.png" alt="Photo"></div>
+                        <div class="carousel-slide"><img src="VRprototype.jpeg" alt="Photo"></div>
+                        <div class="carousel-slide"><img src="AishaVR.jpeg" alt="Photo"></div>
+                        <div class="carousel-slide"><img src="friends.JPG" alt="Photo"></div>
+                        <div class="carousel-slide"><img src="VRcar.jpeg" alt="Photo"></div>
+                        <div class="carousel-slide"><img src="friendsboba.JPG" alt="Photo"></div>
+                        <div class="carousel-slide"><img src="MITrealityhack.jpeg" alt="Photo"></div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1)">&#8594;</button>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </section>
+
+        <script>
+            let current = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dotsContainer = document.getElementById('carouselDots');
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
+            });
+
+            function goToSlide(n) {
+                slides[current].classList.remove('active');
+                dotsContainer.children[current].classList.remove('active');
+                current = (n + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                dotsContainer.children[current].classList.add('active');
+            }
+
+            function moveSlide(dir) { goToSlide(current + dir); }
+            slides[0].classList.add('active');
+        </script>
+
         <section class="contact">
-            <h2>Contact</h2>
-            <p>Phone: <a href="tel:+19494393979">+1 (949) 439-3979</a></p>
-            <p>Email: <a href="mailto:zahir.a@northeastern.edu">zahir.a@northeastern.edu</a></p>
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:bigham.a@northeastern.edu">bigham.a@northeastern.edu</a></p>
             <p>LinkedIn: <a href="https://linkedin.com/in/aishabigham" target="_blank">linkedin.com/in/aishabigham</a></p>
         </section>
     </main>
