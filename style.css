@@ -295,8 +295,7 @@ footer {
     padding: 0 8px;
 }
 
-.carousel-wrapper {
-    position: relative;
+.carousel {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -329,10 +328,9 @@ footer {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 12px;
     display: block;
-    background: #f9f0f3;
 }
 
 .carousel-btn {
