@@ -292,6 +292,7 @@ footer {
 /* ---- Carousel ---- */
 .carousel-section {
     margin-bottom: 56px;
+    padding: 0 8px;
 }
 
 .carousel-wrapper {
@@ -328,9 +329,10 @@ footer {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
     display: block;
+    background: #f9f0f3;
 }
 
 .carousel-btn {
