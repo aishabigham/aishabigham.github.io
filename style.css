@@ -295,14 +295,12 @@ footer {
 }
 
 .carousel {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    position: relative;
     width: 100%;
 }
 
 .carousel-track-wrapper {
-    flex: 1;
+    width: 100%;
     overflow: hidden;
     border-radius: 12px;
 }
@@ -331,6 +329,9 @@ footer {
 }
 
 .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: #fff;
     border: 1px solid #f0d6de;
     color: #c2607a;
@@ -339,10 +340,13 @@ footer {
     height: 44px;
     border-radius: 50%;
     cursor: pointer;
-    flex-shrink: 0;
     box-shadow: 0 2px 8px rgba(180,80,100,0.1);
     transition: background 0.2s;
+    z-index: 10;
 }
+
+.carousel-btn.prev { left: -22px; }
+.carousel-btn.next { right: -22px; }
 
 .carousel-btn:hover {
     background: #fce9f0;
